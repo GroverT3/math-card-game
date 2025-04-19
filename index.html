@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equationist</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <header>
+    <h1>Equationist</h1>
+  </header>
+  <main>
+<audio id="correct-sound" src="sounds/correct.mp3" preload="auto"></audio>
+    <section class="game-ui">
+      <!-- Start Button -->
+      <button id="startButton" class="start-button">Start</button>
+
+      <!-- Game Info Container -->
+   <div class="game-info-container">
+<button id="musicToggle" class="music-toggle">🎵 Music: On</button>
+     <div class="info-box">
+     <div class="timer">Time: <span id="time">30</span></div>
+     <div class="score">Score: <span id="score">0</span></div>
+   </div>
+   <div class="info-box">
+     <div class="problem" id="problem">Target: </div>
+     <div class="equation" id="equation">Equation: </div>
+    </div>
+   </div>
+      <button id="submit">Submit</button>
+      <button id="clear">Clear</button>
+    </section>
+    <section class="cards" id="cardContainer"></section>
+       
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Equationist</p>
+  </footer>
+<audio id="bg-music" src="sounds/background.mp3" loop></audio>
+  <script src="game.js"></script>
+</body>
+</html>
+

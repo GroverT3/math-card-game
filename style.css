@@ -1,0 +1,111 @@
+body {
+  font-family: 'poppins', sans-serif;
+  background-image: url("cards/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #333;
+  line-height: 1.5;
+}
+.game-ui {
+  max-width: 500px; /* Adjusted width to give more space */
+  margin: 1rem auto; /* Centered container */
+  background-color: rgba(255, 255, 255, 0.9); /* Light, semi-transparent background */
+  padding: 1rem; /* Less padding for a tighter look */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* Reduced gap between elements */
+}
+
+.timer, .score, .target, .equation {
+  font-size: 1.2rem; /* Smaller font size for a cleaner look */
+  margin: 0.4rem 0; /* Reduced margin */
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem; /* Add some space between the UI and the cards */
+}
+
+.card {
+  background-color: #e0f7fa;
+  border: 2px solid #00bcd4;
+  border-radius: 8px;
+  width: 90px; /* Adjusted width for larger cards */
+  height: 120px; /* Adjusted height for larger cards */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s;
+}
+
+.card-img {
+  max-width: 90px; /* Adjust max width to fit the new size */
+  max-height: 120px; /* Adjust max height to fit the new size */
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card.operator {
+  background-color: #fff3e0;
+  border-color: #ff9800;
+}
+
+button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+.game-info-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 160px;
+}
+
+.problem {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4757;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.equation {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e90ff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
