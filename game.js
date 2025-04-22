@@ -19,15 +19,15 @@ const cardContainer = document.getElementById('cardContainer');
 const numberCards = Array.from({ length: 10 }, (_, i) => ({
   type: 'number',
   value: i,
-  src: `cards/number_${i}.webp`,
+  src: `cards/number_${i}.png`,
   alt: `${i}`,
 }));
 
 const operatorCards = [
-  { type: 'operator', value: '+', src: 'cards/addition.webp', alt: '+' },
-  { type: 'operator', value: '-', src: 'cards/subtraction.webp', alt: '-' },
-  { type: 'operator', value: '*', src: 'cards/multiply.webp', alt: '×' },
-  { type: 'operator', value: '/', src: 'cards/division.webp', alt: '÷' },
+  { type: 'operator', value: '+', src: 'cards/addition.png', alt: '+' },
+  { type: 'operator', value: '-', src: 'cards/subtraction.png', alt: '-' },
+  { type: 'operator', value: '*', src: 'cards/multiply.png', alt: '×' },
+  { type: 'operator', value: '/', src: 'cards/division.png', alt: '÷' },
 ];
 
 // Generate and display cards
