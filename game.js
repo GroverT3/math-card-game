@@ -30,7 +30,6 @@ const operatorCards = [
   { type: 'operator', value: '/', src: 'cards/division.png', alt: '÷' },
 ];
 
-// Generate and display cards
 function generateCards() {
   const cards = [...numberCards, ...operatorCards];
 
@@ -47,7 +46,6 @@ function generateCards() {
     div.appendChild(img);
     cardContainer.appendChild(div);
 
-    // ✅ Add click listener directly
     div.addEventListener('click', () => {
       equation.push(card.value);
       equationDisplay.textContent = `Equation: ${equation.join(' ')}`;
@@ -55,10 +53,8 @@ function generateCards() {
   });
 }
 
-// Clear button resets current equation
 clearButton.addEventListener('click', resetEquation);
 
-// Submit button checks answer
 submitButton.addEventListener('click', () => {
   const joined = equation.join('');
 
@@ -90,18 +86,16 @@ submitButton.addEventListener('click', () => {
   newProblem();
 });
 
-// Start game when button clicked
 startButton.addEventListener('click', () => {
   startButton.style.display = 'none';
-if (musicPlaying) {
-  bgMusic.play();
-}
-              // ✅ Start music
-  generateCards();            // ✅ Generate cards once
-  startRound();               // ✅ Begin round
+  if (musicPlaying) {
+    bgMusic.play();
+  }
+  cardContainer.innerHTML = '';
+  generateCards();
+  startRound();
 });
 
-// Helpers
 function isValidEquation(equationStr) {
   return /[\+\-\*\/]/.test(equationStr);
 }
@@ -179,7 +173,7 @@ function endGame() {
     playAgainBtn.remove();
     submitButton.style.display = 'inline-block';
     clearButton.style.display = 'inline-block';
-    startRound();
+    startButton.style.display = 'inline-block';
   });
 }
 
