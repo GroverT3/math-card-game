@@ -1,7 +1,7 @@
 let equation = [];
 let score = 0;
 let round = 1;
-let timeLeft = 30;
+let timeLeft = 55;
 let timerInterval;
 let targetNumber = generateTarget();
 let totalRounds = 3;
@@ -13,7 +13,19 @@ const problemDisplay = document.getElementById('problem');
 const submitButton = document.getElementById('submit');
 const clearButton = document.getElementById('clear');
 const correctSound = document.getElementById('correct-sound');
-const startButton = document.getElementById('startButton');
+startButton.addEventListener('click', () => {
+  startButton.style.display = 'none';
+  document.getElementById('gameRules').style.display = 'none';
+
+  if (musicPlaying) {
+    bgMusic.play();
+  }
+
+  cardContainer.innerHTML = '';
+  generateCards();
+  startRound();
+});
+
 const cardContainer = document.getElementById('cardContainer');
 
 const numberCards = Array.from({ length: 10 }, (_, i) => ({
@@ -101,7 +113,7 @@ function isValidEquation(equationStr) {
 }
 
 function generateTarget() {
-  return Math.floor(Math.random() * 20) + 1;
+  return Math.floor(Math.random() * 50) + 1;
 }
 
 function resetEquation() {
@@ -111,7 +123,8 @@ function resetEquation() {
 
 function newProblem() {
   targetNumber = generateTarget();
-  problemDisplay.textContent = `Target: ${targetNumber}`;
+  const targetSpan = document.getElementById("targetNumber");
+  targetSpan.textContent = targetNumber;
 }
 
 function shuffleCards() {
@@ -124,7 +137,7 @@ function shuffleCards() {
 }
 
 function startRound() {
-  timeLeft = 30;
+  timeLeft = 55;
   timeDisplay.textContent = timeLeft;
   newProblem();
   resetEquation();

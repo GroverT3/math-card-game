@@ -15,18 +15,25 @@
   <main>
     <audio id="correct-sound" src="sounds/correct.mp3" preload="auto"></audio>
     <section class="game-ui">
+
+    <!-- Game UI -->
+    <section class="game-ui">
       <button id="startButton" class="start-button">Start</button>
 
-      <div class="top-info-container">
+      <!-- Timer and Score - placed in top-left -->
+      <div class="top-left-container">
         <div class="info-box">
-          <div class="timer">Time: <span id="time">30</span></div>
+          <div class="timer">Time: <span id="time">55</span></div>
           <div class="score">Score: <span id="score">0</span></div>
         </div>
       </div>
 
       <div class="action-container">
         <div class="info-box">
-          <div class="problem" id="problem">Target: </div>
+          <div class="problem" id="problem">
+            Target:
+            <span class="target-box" id="targetNumber">--</span>
+          </div>
           <div class="equation" id="equation">Equation: </div>
         </div>
         <div class="buttons">
@@ -35,12 +42,33 @@
         </div>
       </div>
     </section>
+      <div id="gameRules">
+        <h2>How to Play</h2>
+         <ul>
+           <li>Click number and operator cards to build an equation.</li>
+           <li>Your goal is to match the target number.</li>
+           <li>Using more than one operator gives double points!</li>
+           <li>You have 30 seconds per round, 3 rounds total.</li>
+        </ul>
+      </div>
+    <!-- Cards Section -->
     <section class="cards" id="cardContainer"></section>
   </main>
   <footer>
     <p>&copy; 2025 Equationist</p>
   </footer>
   <audio id="bg-music" src="sounds/background.mp3" loop></audio>
+=======
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Equationist</p>
+  </footer>
+
+  <!-- Audio Files -->
+  <audio id="bg-music" src="sounds/background.mp3" loop></audio>
+
+  <!-- External JavaScript -->
   <script src="game.js"></script>
 </body>
 </html>
